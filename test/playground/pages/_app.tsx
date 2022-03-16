@@ -1,8 +1,9 @@
-import OneProvider from "@one/core/provider/OneProvider";
+import { OneProvider } from '@one/core'
 
 export default function App({ Component, pageProps }) {
-  return 
+  return (
     <OneProvider>
-        <Component {...pageProps} />
+      <Component {...pageProps} />
     </OneProvider>
+  )
 }
