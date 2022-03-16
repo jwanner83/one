@@ -1,5 +1,8 @@
 node_modules
 .next
 .env.local
-node_modules
 **/.DS_Store
+.idea
+dist
+.rollup.cache
+tsconfig.tsbuildinfo
