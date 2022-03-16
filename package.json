@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "author": "Jonas Wanner",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  }
+}
