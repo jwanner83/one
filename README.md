@@ -9,6 +9,7 @@ to use it, just add this to your `_app.tsx`
 
 ```tsx
 import { OneProvider } from '@one/core'
+import '@one/core/dist/one.css'
 
 export default function App({ Component, pageProps }) {
   return (

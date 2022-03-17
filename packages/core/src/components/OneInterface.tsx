@@ -7,7 +7,7 @@ type OneInterfaceParmas = {
 export default function OneInterface({ children }: OneInterfaceParmas) {
   return (
     <div>
-      <div>admin interface</div>
+      <div className="font-bold">admin interface</div>
       {children}
     </div>
   )
