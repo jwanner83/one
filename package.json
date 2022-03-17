@@ -3,7 +3,8 @@
   "author": "Jonas Wanner",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev": "pnpm run dev --filter=./ --parallel"
   },
   "devDependencies": {
     "typescript": "^4.6.2",

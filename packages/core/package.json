@@ -4,7 +4,7 @@
   "author": "Jonas Wanner",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c --watch"
+    "dev": "rollup -c --watch"
   },
   "files": [
     "dist/*"
