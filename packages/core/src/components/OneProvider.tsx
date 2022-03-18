@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import OneInterface from './OneInterface'
+import OneInterface from './interface/OneInterface'
 
 type OneProviderParams = {
   children: ReactNode
