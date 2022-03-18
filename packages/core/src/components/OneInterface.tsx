@@ -1,3 +1,4 @@
+import OneHeader from '@/components/header/OneHeader'
 import React, { ReactNode } from 'react'
 
 type OneInterfaceParmas = {
@@ -6,9 +7,13 @@ type OneInterfaceParmas = {
 
 export default function OneInterface({ children }: OneInterfaceParmas) {
   return (
-    <div>
-      <div className="font-bold">admin interface</div>
-      {children}
+    <div className="h-screen relative">
+      <div className="h-full grid grid-rows-one-layout p-8">
+        <div>
+          <OneHeader />
+        </div>
+        <div className="rounded-2xl overflow-x-auto">{children}</div>
+      </div>
     </div>
   )
 }
