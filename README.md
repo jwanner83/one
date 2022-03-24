@@ -1,3 +1,5 @@
+![one](docs/assets/lead.png)
+
 # one
 
 headless cms for next.js based on supabase for developers.
