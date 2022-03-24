@@ -12,13 +12,14 @@ export default [
     input: 'src/mod.ts',
     plugins: [
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json', outputToFilesystem: true }),
+      typescript({ tsconfig: './tsconfig.json', outputToFilesystem: false }),
       postcss({
         config: {
           path: path.resolve('postcss.config.js')
         },
         extract: path.resolve('dist/one.css')
-      })
+      }),
+      del({ targets: ['.rollup.cache'], hook: 'buildEnd' })
     ],
     output: [
       {
@@ -27,7 +28,7 @@ export default [
         sourcemap: true
       }
     ],
-    external: ['jotai', 'react']
+    external: ['jotai', 'react', '@supabase/supabase-js']
   },
   {
     input: 'dist/types/mod.d.ts',
@@ -41,6 +42,11 @@ export default [
         format: 'esm'
       }
     ],
-    external: [/\.css$/]
+    external: [
+      /\.css$/,
+      '@/types/OnePage.types',
+      '@/hooks/auth/login',
+      '@/hooks/auth/logout'
+    ]
   }
 ]
