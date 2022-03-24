@@ -20,7 +20,7 @@ content and adding pages and posts and many more.
 it is **not** a wordpress like solution with a one click installer. the installation requires a developer know react 
 and next.js.
 
-### use case
+### intention
 
 this tool was created because i was tired of using wordpress. i wanted to develop webpages
 with modern tools and languages like react with next.js and a backend solution like supabase, without the need of 
