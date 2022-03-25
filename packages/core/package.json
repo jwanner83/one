@@ -11,10 +11,14 @@
   ],
   "main": "dist/mod.js",
   "types": "dist/mod.d.ts",
+  "peerDependencies": {
+    "next": "^12.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "dependencies": {
-    "@supabase/supabase-js": "^1.31.1",
     "jotai": "^1.6.1",
-    "react": "^17.0.2"
+    "@supabase/supabase-js": "^1.31.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
@@ -26,6 +30,7 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.2.0",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tailwindcss": "^3.0.23",
     "tslib": "^2.3.1"
   }
