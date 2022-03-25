@@ -3,6 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 import path from 'path'
 import del from 'rollup-plugin-delete'
 import dts from 'rollup-plugin-dts'
+import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 
 const production = !process.env.ROLLUP_WATCH
@@ -19,6 +20,7 @@ export default [
         },
         extract: path.resolve('dist/one.css')
       }),
+      external(),
       del({ targets: ['.rollup.cache'], hook: 'buildEnd' })
     ],
     output: [
@@ -27,8 +29,7 @@ export default [
         format: 'esm',
         sourcemap: true
       }
-    ],
-    external: ['jotai', 'react', '@supabase/supabase-js']
+    ]
   },
   {
     input: 'dist/types/mod.d.ts',
