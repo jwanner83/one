@@ -32,6 +32,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tailwindcss": "^3.0.23",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "tslib": "^2.3.1"
   }
 }
