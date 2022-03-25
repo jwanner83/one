@@ -1,6 +1,12 @@
 {
+  "name": "@one/playground",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=6.30"
+  },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write ./src ",
