@@ -1,4 +1,4 @@
-![one](docs/assets/lead.png)
+![one](docs/assets/lead.svg)
 
 # one
 
