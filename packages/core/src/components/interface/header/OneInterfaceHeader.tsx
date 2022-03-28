@@ -1,10 +1,12 @@
+import Edit from '@/components/icons/Edit'
 import Logo from '@/components/icons/Logo'
 import Menu from '@/components/icons/Menu'
-import { configModeAtom } from '@/state/atoms'
+import { configModeAtom, editModeAtom } from '@/state/atoms'
 import { useAtom } from 'jotai'
 import React from 'react'
 
 export default function OneInterfaceHeader() {
+  const [editMode, setEditMode] = useAtom(editModeAtom)
   const [configMode, setConfigMode] = useAtom(configModeAtom)
 
   return (
@@ -12,7 +14,13 @@ export default function OneInterfaceHeader() {
       <div className="h-10 w-10 ">
         <Logo />
       </div>
-      <div>
+      <div className="flex gap-2">
+        <div
+          className="h-8 w-8 rounded p-0.5 mr-1 cursor-pointer transition hover:bg-gray-200 active:scale-90"
+          onClick={() => setEditMode(!editMode)}
+        >
+          <Edit />
+        </div>
         <div
           className="h-8 w-8 rounded p-0.5 mr-1 cursor-pointer transition hover:bg-gray-200 active:scale-90"
           onClick={() => setConfigMode(!configMode)}
