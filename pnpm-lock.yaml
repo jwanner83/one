@@ -14,6 +14,8 @@ importers:
 
   packages/core:
     specifiers:
+      '@editorjs/editorjs': ^2.23.2
+      '@editorjs/paragraph': ^2.8.0
       '@rollup/plugin-commonjs': ^21.0.2
       '@rollup/plugin-typescript': ^8.3.1
       '@supabase/supabase-js': ^1.31.1
@@ -22,6 +24,7 @@ importers:
       autoprefixer: ^10.4.4
       jotai: ^1.6.1
       postcss: ^8.4.12
+      react-editor-js: ^2.0.6
       rollup: ^2.70.1
       rollup-plugin-delete: ^2.0.0
       rollup-plugin-dts: ^4.2.0
@@ -30,8 +33,11 @@ importers:
       tailwindcss: ^3.0.23
       tslib: ^2.3.1
     dependencies:
+      '@editorjs/editorjs': 2.23.2
+      '@editorjs/paragraph': 2.8.0
       '@supabase/supabase-js': 1.31.1
       jotai: 1.6.1
+      react-editor-js: 2.0.6_76f2771f60ba9f4dcd1d30b694476c8f
     devDependencies:
       '@rollup/plugin-commonjs': 21.0.2_rollup@2.70.1
       '@rollup/plugin-typescript': 8.3.1_859e05ab655ea3c900a5f26a0311c0b5
@@ -318,6 +324,18 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
+  /@editorjs/editorjs/2.23.2:
+    resolution: {integrity: sha512-SXWQjxE/ZO6zWvo83U+gfkM9LVJzYOtNkttyXkdfyYALVWiENyxtlej/Jmd1TZ4yWpKwQEICPXz0ceGkzKnJyQ==}
+    dependencies:
+      codex-notifier: 1.1.2
+      codex-tooltip: 1.0.5
+      nanoid: 3.3.1
+    dev: false
+
+  /@editorjs/paragraph/2.8.0:
+    resolution: {integrity: sha512-z6w5ZR0ru3p/IjxJW/tb7OcSnVttkZukQMIsnBMX1FIKc1BNdr7NwM1YoCyTl4OnC90YfL0xgES6/20/W267pw==}
+    dev: false
+
   /@eslint/eslintrc/0.4.3:
     resolution: {integrity: sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -502,6 +520,39 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@react-editor-js/client/2.0.6_76f2771f60ba9f4dcd1d30b694476c8f:
+    resolution: {integrity: sha512-LMMJLAXAwk1kVMy7fxTRFK6OdouvoseqJbmVUygJb2EcfuT84nC9OAtvGEL4vsVLUcnzEV400+F9t5OKa77FGQ==}
+    peerDependencies:
+      '@editorjs/editorjs': '*'
+      '@editorjs/paragraph': '*'
+      react: '*'
+    dependencies:
+      '@editorjs/editorjs': 2.23.2
+      '@editorjs/paragraph': 2.8.0
+      '@react-editor-js/core': 2.0.6_@editorjs+editorjs@2.23.2
+    dev: false
+
+  /@react-editor-js/core/2.0.6_@editorjs+editorjs@2.23.2:
+    resolution: {integrity: sha512-mvHM2I+gT3AnvFpFhTZI0EFLKD9pRpgXDf286uwv6n6tngwLfnCCmtCbgiGI9ICph2GJvRZfaQubE+MHQ6YV8g==}
+    peerDependencies:
+      '@editorjs/editorjs': '*'
+      react: '*'
+    dependencies:
+      '@editorjs/editorjs': 2.23.2
+    dev: false
+
+  /@react-editor-js/server/2.0.6_76f2771f60ba9f4dcd1d30b694476c8f:
+    resolution: {integrity: sha512-soW/bV5auciYr8gEYISWK4fuIblAcc4bcwPuCKnDBj9W9r/nAxMmNgCG+z9rs9Gnroa0Ko3Hzwzs9d5MdOShzg==}
+    peerDependencies:
+      '@editorjs/editorjs': '*'
+      '@editorjs/paragraph': '*'
+      react: '*'
+    dependencies:
+      '@editorjs/editorjs': 2.23.2
+      '@editorjs/paragraph': 2.8.0
+      '@react-editor-js/core': 2.0.6_@editorjs+editorjs@2.23.2
+    dev: false
 
   /@rollup/plugin-commonjs/21.0.2_rollup@2.70.1:
     resolution: {integrity: sha512-d/OmjaLVO4j/aQX69bwpWPpbvI3TJkQuxoAk7BH8ew1PyoMBLTOuvJTjzG8oEoW7drIIqB0KCJtfFLu/2GClWg==}
@@ -1060,6 +1111,14 @@ packages:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
     dev: true
+
+  /codex-notifier/1.1.2:
+    resolution: {integrity: sha512-DCp6xe/LGueJ1N5sXEwcBc3r3PyVkEEDNWCVigfvywAkeXcZMk9K41a31tkEFBW0Ptlwji6/JlAb49E3Yrxbtg==}
+    dev: false
+
+  /codex-tooltip/1.0.5:
+    resolution: {integrity: sha512-IuA8LeyLU5p1B+HyhOsqR6oxyFQ11k3i9e9aXw40CrHFTRO2Y1npNBVU3W1SvhKAbUU7R/YikUBdcYFP0RcJag==}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -3375,6 +3434,17 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-editor-js/2.0.6_76f2771f60ba9f4dcd1d30b694476c8f:
+    resolution: {integrity: sha512-8u47IbhExiFB2kGNdJYlsX5iVlSzac38A3oJ7bmnTz3Lp7Slys1xreoYdG71+KiOcfX0dEgOIavV4e6TJeB5eg==}
+    dependencies:
+      '@react-editor-js/client': 2.0.6_76f2771f60ba9f4dcd1d30b694476c8f
+      '@react-editor-js/server': 2.0.6_76f2771f60ba9f4dcd1d30b694476c8f
+    transitivePeerDependencies:
+      - '@editorjs/editorjs'
+      - '@editorjs/paragraph'
+      - react
     dev: false
 
   /react-is/16.13.1:
